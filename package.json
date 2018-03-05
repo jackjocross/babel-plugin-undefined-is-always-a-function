@@ -1,0 +1,23 @@
+{
+  "name": "babel-plugin-undefined-is-always-a-function",
+  "version": "1.0.0",
+  "description": "Make sure that undefined is a always a funcion.",
+  "repository": "crosscompile/babel-plugin-undefined-is-always-a-function",
+  "author": "Jack Cross <jackjocross@gmail.com>",
+  "main": "lib/index.js",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13"
+  },
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "babel src -d lib --plugins add-module-exports",
+    "test": "babel-node test/index.spec.js",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "babel-plugin"
+  ]
+}
